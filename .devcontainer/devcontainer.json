@@ -1,0 +1,30 @@
+{
+    "name": "CS50 Development Environment",
+    "image": "mcr.microsoft.com/devcontainers/universal:linux",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.10"
+        }
+    },
+"postCreateCommand": "bash -c 'sudo apt-get remove -y gpg && sudo apt-get update -y && sudo apt-get install -y gnupg1 && curl -s https://packagecloud.io/install/repositories/cs50/repo/script.deb.sh | sudo bash && sudo apt-get update && sudo apt-get install -y build-essential gcc gdb make libcs50 valgrind && pip install --user -r requirements.txt'",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "streetsidesoftware.code-spell-checker"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.formatting.provider": "black",
+                "C_Cpp.default.includePath": [
+                    "/usr/include/cs50"
+                ]
+            }
+        }
+    }
+}
