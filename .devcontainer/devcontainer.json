@@ -6,7 +6,7 @@
             "version": "3.10"
         }
     },
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release && sudo update-ca-certificates && export CURL_SSL_BACKEND=\"openssl\" && curl -fsSL --retry 3 --retry-delay 2 https://packagecloud.io/cs50/repo/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/cs50-archive-keyring.gpg && echo 'deb [signed-by=/usr/share/keyrings/cs50-archive-keyring.gpg] https://packagecloud.io/cs50/repo/ubuntu/ focal main' | sudo tee /etc/apt/sources.list.d/cs50.list && sudo apt-get update && DEBIAN_FRONTEND=noninteractive sudo apt-get install -y libcs50 build-essential gcc gdb make valgrind && pip install -r requirements.txt",
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential gcc gdb make valgrind && cd /tmp && git clone https://github.com/cs50/libcs50.git && cd libcs50 && make install && cd / && rm -rf /tmp/libcs50 && pip install -r requirements.txt",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -21,7 +21,7 @@
                 "python.linting.enabled": true,
                 "python.formatting.provider": "black",
                 "C_Cpp.default.includePath": [
-                    "/usr/include/cs50"
+                    "/usr/local/include"
                 ]
             }
         }
