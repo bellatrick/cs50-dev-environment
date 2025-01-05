@@ -6,7 +6,7 @@
             "version": "3.10"
         }
     },
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y wget software-properties-common && wget -q https://packagecloud.io/cs50/repo/gpgkey -O - | sudo apt-key add - && echo 'deb https://packagecloud.io/cs50/repo/ubuntu/ focal main' | sudo tee /etc/apt/sources.list.d/cs50.list && sudo apt-get update && sudo apt-get install -y libcs50 build-essential gcc gdb make valgrind && pip install -r requirements.txt",
+    "postCreateCommand": "pip install --upgrade pip -r requirements.txt && sudo apt-get update && sudo apt-get install -y build-essential gcc gdb make valgrind && cd /tmp && git clone https://github.com/cs50/libcs50.git && cd libcs50 && make install && cd / && rm -rf /tmp/libcs50",
     "customizations": {
         "vscode": {
             "extensions": [
