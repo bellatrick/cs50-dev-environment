@@ -1,8 +1,8 @@
-SQLAlchemy>=1.4,<2.0
-cs50==9.2.5
-check50==3.3.7
-submit50==3.1.1
-style50==2.7.5
-pytest>=7.0.0
-black>=22.0.0
+SQLAlchemy
+cs50
+check50
+submit50
+style50
+pytest
+black
 
