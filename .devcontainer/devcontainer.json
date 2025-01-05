@@ -1,8 +1,6 @@
 {
     "name": "CS50 Development Environment",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "image": "mcr.microsoft.com/devcontainers/universal:linux",
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.10"
@@ -28,6 +26,6 @@
             }
         }
     },
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-    "remoteUser": "daytona"
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+
 }
