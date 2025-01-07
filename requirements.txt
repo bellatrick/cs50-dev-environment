@@ -1,8 +1,0 @@
-SQLAlchemy
-cs50
-check50
-submit50
-style50
-pytest
-black
-
