@@ -1,6 +1,6 @@
 {
     "name": "CS50 Development Environment",
     "image": "mcr.microsoft.com/devcontainers/python:3.10",
-    "postCreateCommand": "sudo pip install --upgrade pip SQLAlchemy cs50 check50 submit50 style50 pytest black && sudo apt-get update && sudo apt-get install -y build-essential gcc gdb make valgrind && sudo sh -c 'cd /tmp && git clone https://github.com/cs50/libcs50.git && cd libcs50 && make install && rm -rf /tmp/libcs50'"
+    "postStartCommand": " pip install --upgrade pip SQLAlchemy cs50 check50 submit50 style50 pytest black && apt-get update && apt-get install -y build-essential gcc gdb make valgrind && sh -c 'cd /tmp && git clone https://github.com/cs50/libcs50.git && cd libcs50 && make install && rm -rf /tmp/libcs50'"
 
 }
